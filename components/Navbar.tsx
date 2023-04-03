@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { BellIcon, MagnifyingGlassIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
-
 import AccountMenu from '@/components/AccountMenu';
 import MobileMenu from '@/components/MobileMenu';
 import NavbarItem from '@/components/NavbarItem';

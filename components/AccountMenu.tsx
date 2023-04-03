@@ -1,6 +1,5 @@
 import { signOut } from 'next-auth/react';
 import React from 'react';
-
 import useCurrentUser from '@/hooks/useCurrentUser';
 
 interface AccountMenuProps {
@@ -27,7 +26,7 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
         Sign out of Netflix
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default AccountMenu;

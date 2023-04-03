@@ -12,7 +12,7 @@ const useMovies = () => {
     error,
     isLoading,
     mutate
-  }
+  };
 };
 
 export default useMovies;

@@ -18,6 +18,6 @@ const PlayButton: React.FC<PlayButtonProps> = ({ movieId }) => {
         Play
     </button>
   );
-}
+};
 
 export default PlayButton;

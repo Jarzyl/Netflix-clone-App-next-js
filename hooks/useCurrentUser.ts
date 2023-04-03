@@ -1,7 +1,6 @@
 // Thanks to SWR we don't need Redux or any state management for fetching our user data
 
 import useSwr from 'swr'
-
 import fetcher from '@/libs/fetcher';
 
 const useCurrentUser = () => {
@@ -11,7 +10,7 @@ const useCurrentUser = () => {
     error,
     isLoading,
     mutate,
-  }
+  };
 };
 
 export default useCurrentUser;

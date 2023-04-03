@@ -11,7 +11,7 @@ const useMovie = (id?: string) => {
     data,
     error,
     isLoading
-  }
+  };
 };
 
 export default useMovie;

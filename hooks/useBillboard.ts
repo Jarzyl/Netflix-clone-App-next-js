@@ -13,7 +13,7 @@ const useBillboard = () => {
     data,
     error,
     isLoading
-  }
+  };
 };
 
 export default useBillboard;

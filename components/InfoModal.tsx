@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { XMarkIcon } from '@heroicons/react/24/outline';
-
 import PlayButton from '@/components/PlayButton';
 import FavoriteButton from '@/components/FavoriteButton';
 import useInfoModalStore from '@/hooks/useInfoModalStore';

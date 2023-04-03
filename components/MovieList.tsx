@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { MovieInterface } from '@/types';
 import MovieCard from '@/components/MovieCard';
 import { isEmpty } from 'lodash';
@@ -26,6 +25,6 @@ const MovieList: React.FC<MovieListProps> = ({ data, title }) => {
       </div>
     </div>
   );
-}
+};
 
 export default MovieList;

@@ -32,7 +32,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ visible }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default MobileMenu;

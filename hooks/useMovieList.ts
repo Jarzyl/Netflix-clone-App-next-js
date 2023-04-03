@@ -11,7 +11,7 @@ const useMovies = () => {
     data,
     error,
     isLoading
-  }
+  };
 };
 
 export default useMovies;

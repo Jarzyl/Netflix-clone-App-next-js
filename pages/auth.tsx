@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 import { FcGoogle } from 'react-icons/fc';
 import { FaGithub } from 'react-icons/fa';
 import logo from 'public/images/logo.png'
-
 import Input from '@/components/Input';
 import Image from 'next/image';
 
@@ -79,15 +78,21 @@ const Auth = () => {
     }
   }, [email, name, password, login]);
 
+  const handleNameBlur = () => {
+    if (name.trim() === '') {
+      alert('Please enter your name');
+    }
+  };
+
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
-      <div className="bg-black w-full h-full lg:bg-opacity-50">
-        <nav className="px-12 py-5">
+      <div className="bg-black w-full h-full bg-opacity-50">
+        <nav className="px-12 py-3">
           <Image src={logo} width={200} className="" alt="Logo" />
         </nav>
         <div className="flex justify-center">
-          <div className="bg-black bg-opacity-70 px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">
-            <h2 className="text-white text-4xl mb-8 font-semibold">
+          <div className="bg-black bg-opacity-70 px-16 py-8 self-center h-full lg:w-2/5 lg:max-w-md rounded-md w-full">
+            <h2 className="text-white text-3xl xl:text-4xl mb-6 font-semibold">
               {/* Login or register */}
               {variant === 'login' ? 'Sign in' : 'Register'} 
             </h2>
@@ -99,13 +104,13 @@ const Auth = () => {
                   type="text"
                   label="Username"
                   value={name}
-                  onChange={(e: any) => setName(e.target.value)} 
+                  onChange={(e: any) => setName(e.target.value)}
                 />
               )}
               <Input
                 id="email"
                 type="email"
-                label="Email address or phone number"
+                label="Email address"
                 value={email}
                 onChange={(e: any) => setEmail(e.target.value)} 
               />
@@ -120,11 +125,11 @@ const Auth = () => {
 
             {/* Button for login, otherwise for register */}
             <button 
-            onClick={variant === 'login' ? login : register} className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition">
+            onClick={variant === 'login' ? login : register} className="bg-red-600 py-3 text-white rounded-md w-full mt-6 hover:bg-red-700 transition">
               {/* Login for login, otherwiste sign up */}
               {variant === 'login' ? 'Login' : 'Sign up'}
             </button>
-            <div className="flex flex-row items-center gap-4 mt-8 justify-center">
+            <div className="flex flex-row items-center gap-4 mt-6 justify-center">
               <div 
               onClick={() => signIn('google', { callbackUrl: '/profiles' })} className="w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer hover:opacity-80 transition">
                 <FcGoogle size={32} />
@@ -134,7 +139,7 @@ const Auth = () => {
                 <FaGithub size={32} />
               </div>
             </div>
-            <p className="text-neutral-500 mt-12">
+            <p className="text-neutral-500 mt-4">
               {/* For register - first time / for login - already have */}
               {variant === 'login' ? 'First time using Netflix?' : 'Already have an account?'}
               <span 
